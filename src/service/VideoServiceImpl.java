@@ -18,7 +18,42 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> listVideos() {
+    public List<Video> listVideos(String query) {
         return repository.findAll();
+    }
+
+    @Override
+    public Video findVideoByTitle(String titulo) {
+        return null;
+    }
+
+    @Override
+    public boolean removeVideoList(Video video) {
+        return true;
+    }
+
+    @Override
+    public List<Video> filterByCategory(String categoria) {
+        return List.of();
+    }
+
+    @Override
+    public List<Video> sortByDate() {
+        return List.of();
+    }
+
+    @Override
+    public String getTotalVideos() {
+        return "";
+    }
+
+    @Override
+    public String getTotalDuration() {
+        return "";
+    }
+
+    @Override
+    public String getVideosByCategory() {
+        return "";
     }
 }
